@@ -1,0 +1,39 @@
+[user]
+	name = Franklin Webber
+	email = franklin.webber@gmail.com
+[github]
+	user = burtlo
+[color]
+  ui = auto
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[alias]
+  b = branch
+  co = checkout
+  cob = checkout -b
+  ci = commit
+  dc = diff --cached
+  st = status
+  pu = remote update --prune
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  df = diff --name-only --relative
+  dfma = diff --name-only --diff-filter=MA --relative
+  suball = submodule update --init --recursive
+  dtool = difftool
+[core]
+	autocrlf = input
+	excludesfile = /Users/burtlo/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[achievement]
+	upload = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[rerere]
+	enabled = 1
